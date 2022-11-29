@@ -1,6 +1,6 @@
 import logging
 import os
-import datetime import datetime
+from datetime import datetime
 import os
 
 #log file name
