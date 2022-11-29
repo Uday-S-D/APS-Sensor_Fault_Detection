@@ -1,6 +1,6 @@
 import os,sys
-from sensor.exception import SensorException
-from sensor.logger import logging
+from Sensor.exception import SensorException
+from Sensor.logger import logging
 from datetime import datetime
 FILE_NAME = "sensor.csv"
 TRAIN_FILE_NAME = "train.csv"

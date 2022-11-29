@@ -1,7 +1,7 @@
 import pandas as pd
-from sensor.logger import logging
-from sensor.exception import SensorException
-from sensor.config import mongo_client
+from Sensor.logger import logging
+from Sensor.exception import SensorException
+from Sensor.config import mongo_client
 import os,sys
 
 

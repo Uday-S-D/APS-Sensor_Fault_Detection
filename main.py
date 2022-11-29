@@ -1,9 +1,9 @@
-from sensor.logger import logging
-from sensor.exception import SensorException
-from sensor.utils import get_collection_as_dataframe
+from Sensor.logger import logging
+from Sensor.exception import SensorException
+from Sensor.utils import get_collection_as_dataframe
 import sys,os
-from sensor.entity import config_entity
-from sensor.components.data_ingestion import DataIngestion
+from Sensor.entity import config_entity
+from Sensor.components.data_ingestion import DataIngestion
 
 
 
