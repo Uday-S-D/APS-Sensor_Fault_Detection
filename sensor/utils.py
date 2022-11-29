@@ -1,9 +1,8 @@
 import pandas as pd
-from Sensor.logger import logging
-from Sensor.exception import SensorException
-from Sensor.config import mongo_client
+from sensor.logger import logging
+from sensor.exception import SensorException
+from sensor.config import mongo_client
 import os,sys
-
 
 def get_collection_as_dataframe(database_name:str,collection_name:str)->pd.DataFrame:
     """
@@ -16,7 +15,6 @@ def get_collection_as_dataframe(database_name:str,collection_name:str)->pd.DataF
     return Pandas dataframe of a collection
     """
     try:
-        
         logging.info(f"Reading data from database: {database_name} and collection: {collection_name}")
         df = pd.DataFrame(list(mongo_client[database_name][collection_name].find()))
         logging.info(f"Found columns: {df.columns}")
@@ -27,4 +25,3 @@ def get_collection_as_dataframe(database_name:str,collection_name:str)->pd.DataF
         return df
     except Exception as e:
         raise SensorException(e, sys)
-

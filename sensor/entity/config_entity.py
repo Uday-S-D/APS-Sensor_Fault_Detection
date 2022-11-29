@@ -1,6 +1,6 @@
 import os,sys
-from Sensor.exception import SensorException
-from Sensor.logger import logging
+from sensor.exception import SensorException
+from sensor.logger import logging
 from datetime import datetime
 FILE_NAME = "sensor.csv"
 TRAIN_FILE_NAME = "train.csv"
@@ -12,11 +12,9 @@ class TrainingPipelineConfig:
         try:
             self.artifact_dir = os.path.join(os.getcwd(),"artifact",f"{datetime.now().strftime('%m%d%Y__%H%M%S')}")
         except Exception  as e:
-            raise SensorException(e,sys)     
-
+            raise SensorException(e,sys)  
 
 class DataIngestionConfig:
-
     def __init__(self,training_pipeline_config:TrainingPipelineConfig):
         try:
             self.database_name="APS"
@@ -33,8 +31,9 @@ class DataIngestionConfig:
         try:
             return self.__dict__
         except Exception  as e:
-            raise SensorException(e,sys)    
-class DataIngestionConfig:...
+            raise SensorException(e,sys) 
+    
+
 class DataValidationConfig:...
 class DataTransformationConfig:...
 class ModelTrainerConfig:...
